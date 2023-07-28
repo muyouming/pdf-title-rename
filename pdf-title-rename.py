@@ -125,7 +125,7 @@ class RenamePDFsByTitle(object):
             if 'Title' in info:
                 ti = self._resolve_objref(info['Title'])
                 try:
-                    title = ti.decode('utf-8')
+                    title = ti.decode('utf-16')
                 except AttributeError:
                     pass
                 except UnicodeDecodeError:
@@ -134,7 +134,7 @@ class RenamePDFsByTitle(object):
             if 'Author' in info:
                 au = self._resolve_objref(info['Author'])
                 try:
-                    author = au.decode('utf-8')
+                    author = au.decode('utf-16')
                 except AttributeError:
                     pass
                 except UnicodeDecodeError:
